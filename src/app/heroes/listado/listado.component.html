@@ -1,0 +1,22 @@
+<p>listado de Héroes</p>
+<!-- // si es diferente a vacio entonces heroeBorrado -->
+<!-- Aqui le estas diciendo si esta condicion no se cumple muestra este temple -->
+<div *ngIf="heroeBorrado!==''; else noBorrar">
+    <h3>Héroe borrado: <small>{{heroeBorrado}}</small></h3>
+</div>
+
+<!-- Temple -->
+<ng-template #noBorrar>
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+
+<button (click)="borrarHeroe()">Borrar Heroe</button>
+
+<ul>
+
+    <!-- Hacer un bucle for para pintar una lista -->
+    <!-- Si necesitas el Index entonces añadir el let i = "Index" -->
+    <li *ngFor="let heroe of heroes; let i = index"> {{i+1}} -- {{heroe}}
+    </li>
+</ul>
+<!-- *ngIf="(heroeBorrado=='')" -->
