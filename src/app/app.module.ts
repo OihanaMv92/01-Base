@@ -5,11 +5,14 @@ import { AppComponent } from './app.component';
 
 import { contadorModule } from './contador/contador.module';
 import { heroesModule } from './heroes/heroes.module';
+import { DbzModule } from './dbz/dbz.module';
+import { PokemonsModule } from './pokemons/pokemons.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     // meter el componente creado
    
 
@@ -17,7 +20,9 @@ import { heroesModule } from './heroes/heroes.module';
   imports: [
     BrowserModule,
     heroesModule,
-    contadorModule
+    contadorModule,
+    DbzModule,
+    PokemonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

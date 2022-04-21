@@ -1,0 +1,33 @@
+<h1>Pokemons</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <h3>Animal</h3>
+        <hr>
+        <ul>
+
+            <!-- | number (PIPES) se usan para que ponga , en los valores numericos -->
+            <li *ngFor="let animal of animales">{{animal.nombre}} - {{animal.poder | number}}</li>
+
+        </ul>
+    </div>
+    <div class="col">
+        <h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+        <hr>
+
+        <!-- (ngSubmit)="agregar()" Evento personalizado para que no haga refresh-->
+        <form (ngSubmit)="agregar()">
+            <!-- [(ngModel)]="nuevo.nombre" ngModel con llaves y parentesis quiere decir que quiere escuchar y emitir y que caiga en la propiedad nuevo -->
+            <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre" />
+
+            <!--  [(ngModel)]="nuevo.poder" -->
+            <input type="number" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder" />
+
+            <button type="submit">
+                Agregar
+            </button>
+
+        </form>
+    </div>
+</div>

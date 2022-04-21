@@ -1,0 +1,9 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+
+    <!-- hacer un bucle declaramos variable personaje y cogemos el array que tenemos de personajes -->
+    <li *ngFor="let personaje of personajes">
+        {{ personaje.nombre }} - {{ personaje.poder | number }}
+    </li>
+</ul>
